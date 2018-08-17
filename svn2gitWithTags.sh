@@ -29,7 +29,7 @@ for TAG in `svn ls $SVNREPO/tags/|sed 's;/;;g'|sort --version-sort`; do
 done
 cd $GITDIR
 find . -maxdepth 1 ! -iname .git ! -iname README.md ! -iname .gitignore -exec rm -rf {} \;
-cd $WORDIR
+cd $WORKDIR
 svn checkout $SVNREPO/trunk gitDir
 cd $GITDIR
 rm -rf .svn
